@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sunshine Electronics</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #fff;
+      color: #000;
+    }
+    header {
+      text-align: center;
+      padding: 2rem;
+      border-bottom: 2px solid #000;
+    }
+    header img {
+      width: 100px;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1rem;
+      background: #000;
+      color: #fff;
+    }
+    section {
+      padding: 2rem;
+      max-width: 800px;
+      margin: auto;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    input, textarea {
+      padding: 0.5rem;
+      border: 1px solid #000;
+      border-radius: 4px;
+    }
+    button {
+      padding: 0.5rem;
+      background: #000;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      border-top: 2px solid #000;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="file-1L2jhoUujw5JA3giy2b5FD" alt="Sunshine Electronics Logo">
+    <h1>Sunshine Electronics</h1>
+  </header>
+
+  <nav>
+    <a href="#lead">Web to Lead</a>
+    <a href="#case">Web to Case</a>
+  </nav>
+
+  <section id="lead">
+    <h2>Contact Us (Lead Form)</h2>
+    <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
+      <input type="hidden" name="oid" value="YOUR_SALESFORCE_OID_HERE">
+      <input type="text" name="first_name" placeholder="First Name" required>
+      <input type="text" name="last_name" placeholder="Last Name" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <input type="tel" name="phone" placeholder="Phone">
+      <textarea name="description" placeholder="Tell us what you're looking for..."></textarea>
+      <button type="submit">Submit Lead</button>
+    </form>
+  </section>
+
+  <section id="case">
+    <h2>Customer Support (Case Form)</h2>
+    <form action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8" method="POST">
+      <input type="hidden" name="orgid" value="YOUR_SALESFORCE_ORGID_HERE">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <input type="text" name="subject" placeholder="Subject" required>
+      <textarea name="description" placeholder="Describe your issue" required></textarea>
+      <button type="submit">Submit Case</button>
+    </form>
+  </section>
+
+  <footer>
+    &copy; 2025 Sunshine Electronics. All rights reserved.
+  </footer>
+</body>
+</html>
